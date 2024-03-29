@@ -17,6 +17,7 @@
         "@inertiajs/vue3": "^1.0.14",
         "@vitejs/plugin-vue": "^5.0.4",
         "bootstrap": "^5.3.3",
+        "expo": "^50.0.14",
         "vue": "^3.4.18"
     }
 }
