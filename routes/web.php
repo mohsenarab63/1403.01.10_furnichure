@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PhotoController;
 use App\Models\Blog;
 use App\Models\Mobl;
 use App\Models\User;
@@ -21,6 +22,19 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Home');
 });
+Route::get('/blog', function () {
+    dd(Blog::all());
+    return Inertia::render('Blogs/Index');
+});
+Route::get('admin/blog/create', function () {
+   
+    return Inertia::render('Admin/Blog/Create');
+});
+
+Route::get('/web/admin/blog/',function(){
+   return view('admin.blog.create');
+});
+Route::post('/api/editor/upload',[PhotoController::class,'uploadPhoto'])->name('editor.upload');
 
 Route::get('/test', function () {
    dd( Mobl::find(1)->my_media->pluck('url')->toArray(),Blog::find(1)->my_media->pluck('url')->toArray() );
