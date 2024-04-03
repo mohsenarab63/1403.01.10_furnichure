@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Blog;
+use App\Models\Mobl;
 use App\Models\User;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +21,11 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Home');
 });
+
+Route::get('/test', function () {
+   dd( Mobl::find(1)->my_media->pluck('url')->toArray(),Blog::find(1)->my_media->pluck('url')->toArray() );
+});
+
 Route::get('/users', function () {
     // return Inertia::render('Users',[
     //     'users' => User::all()->map(fn($user)=>[
