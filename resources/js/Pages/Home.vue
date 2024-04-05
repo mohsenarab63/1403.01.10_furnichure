@@ -8,6 +8,11 @@
         />
     </Head>
     <h2>Home</h2>
+    <h2>Home</h2>
+    <h2>Home</h2>
+    <h2>Home</h2>
+    <h2>Home</h2>
+    <h2>Home</h2>
 </template>
 <script setup>
 defineProps(["username"]);

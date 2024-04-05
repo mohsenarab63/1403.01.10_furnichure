@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PhotoController;
 use App\Models\Blog;
 use App\Models\Mobl;
@@ -23,17 +24,21 @@ Route::get('/', function () {
     return Inertia::render('Home');
 });
 Route::get('/blog', function () {
-    dd(Blog::all());
-    return Inertia::render('Blogs/Index');
+    $blogs=Blog::all();
+    return Inertia::render('Blogs/Index',['blogs'=>$blogs]);
 });
-Route::get('admin/blog/create', function () {
+// Route::get('admin/blog/create', function () {
    
-    return Inertia::render('Admin/Blog/Create');
-});
+//     return Inertia::render('Admin/Blog/Create');
+// });
 
-Route::get('/web/admin/blog/',function(){
+
+Route::get('admin/blog/create',function(){
    return view('admin.blog.create');
 });
+Route::post('admin/blog/create',[BlogController::class,'create'])->name('admin.blog.create');
+
+
 Route::post('/api/editor/upload',[PhotoController::class,'uploadPhoto'])->name('editor.upload');
 
 Route::get('/test', function () {
