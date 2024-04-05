@@ -18,22 +18,26 @@
     {{-- import "../assets/js/vendor/jquery-3.4.1.min.js";
 import "../assets/js/vendor/popper.js";
 import "../assets/js/vendor/bootstrap.min.js"; --}}
+@vite(['resources/css/app.css', 'resources/js/app.js'])
+@inertiaHead
+
 </head>
 <body>
     <div id="main">
 
-        <textarea class="form-control" id="editor" rows="10" cols="5" style="height: 500px !important;"></textarea>
-    </div>
+        {{-- <textarea class="form-control" id="editor" rows="10" cols="5" style="height: 500px !important;"></textarea> --}}
+        @inertia
+      </div>
     
         
-        <button onclick="showContent()" class="btn btn-success">Send Content</button>
+        {{-- <button onclick="showContent()" class="btn btn-success">Send Content</button>
         <button onclick="getContentAndSend()">Send Content</button>
         <div id="view_output" style="border:1px solid #999; width:1000px; margin: 0 auto">
 
-        </div>
+        </div> --}}
 
 
-        <script>
+        {{-- <script>
             ClassicEditor
             .create( document.querySelector( '#editor' ), {
                 ckfinder: {
@@ -76,7 +80,7 @@ import "../assets/js/vendor/bootstrap.min.js"; --}}
                     });
             }
     
-            </script>
+            </script> --}}
 
     <style>
         .ck-editor__editable {

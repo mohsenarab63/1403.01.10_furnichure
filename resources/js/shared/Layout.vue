@@ -1,4 +1,5 @@
 <template>
+    <Header />
     <Head>
         <title>My App</title>
         <meta
@@ -21,18 +22,22 @@
             <slot />
         </div>
     </section>
+    <Footer />
 </template>
 <script setup>
 import Nav from "./Nav.vue";
 import { computed, watch, watchEffect } from "vue";
 import { usePage } from "@inertiajs/vue3";
 import { Head } from "@inertiajs/vue3";
+import Header from "../Components/Header.vue";
+import Footer from "../Components/Footer.vue";
 
 // const props = defineProps(["auth"]);
 
 const page = usePage();
 
 console.log("page.props.user: ", page.props.auth.user);
+console.log("page.props.user: ", page.props);
 
 const user = computed(() => page.props.auth.user.username);
 

@@ -8,11 +8,12 @@ class PhotoController extends Controller
 {
     public function uploadPhoto(Request $request)
 {
+     
     if ($request->hasFile('upload')) {
         $photo = $request->file('upload');
         
         // Rename the uploaded file to 'photo'
-        $fileName = 'photo.' .time(). $photo->getClientOriginalExtension();
+        $fileName = 'photo.' .time().".". $photo->getClientOriginalExtension();
         
         // Move the uploaded file to the public/blog directory
         $photo->move(public_path('blogs'), $fileName);

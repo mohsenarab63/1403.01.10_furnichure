@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="canonical" href="Replace_with_your_PAGE_URL" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <!-- Open Graph (OG) meta tags are snippets of code that control how URLs are displayed when shared on social media  -->
     <!-- <meta property="og:locale" content="en_US" />
@@ -67,14 +68,14 @@
   </head>
   <body>
 
-    @include('includes.header')
+    {{-- @include('includes.header') --}}
      <!--header area end-->
     
        @inertia
 
 
        <!-- footer section start -->
-       @include('includes.footer')
+       {{-- @include('includes.footer') --}}
    
    
    

@@ -13,7 +13,7 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    {{-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> --}}
 
     {{-- import "../assets/js/vendor/jquery-3.4.1.min.js";
 import "../assets/js/vendor/popper.js";

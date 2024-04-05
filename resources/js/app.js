@@ -2,6 +2,7 @@ import { createApp, h } from "vue";
 import { createInertiaApp } from "@inertiajs/vue3";
 import { Link, Head } from "@inertiajs/vue3";
 import Layout from "@js/shared/Layout.vue";
+import CKEditor from "@ckeditor/ckeditor5-vue";
 
 // import "../assets/css/vendor/bootstrap.min.css";
 // import "../assets/css/swiper-bundle.min.css";
@@ -54,6 +55,7 @@ createInertiaApp({
     setup({ el, App, props, plugin }) {
         createApp({ render: () => h(App, props) })
             .use(plugin)
+            .use(CKEditor)
             .component("Head", Head)
             .component("Link", Link)
             .mount(el);
